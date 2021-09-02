@@ -17,10 +17,10 @@ const site = {
 function App() {
   return (
     <>
-      <Header data={site}/>
+      <Header data={site} />
       <Main />
       <Sidebar />
-      <Footer data={site}/>
+      <Footer data={site} />
     </>
   );
 }
