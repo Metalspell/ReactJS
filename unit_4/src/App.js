@@ -6,6 +6,7 @@ const task2ref = React.createRef();
 const checkbox = React.createRef();
 const task5ref = React.createRef();
 const task6ref = React.createRef();
+const task7ref = React.createRef();
 const task8ref = React.createRef();
 const task9ref = React.createRef();
 const task10ref = React.createRef();
@@ -53,8 +54,6 @@ function App() {
   }
 
   function task7() {
-    let wrap = document.querySelector('.block-7');
-
     function randomInt(min, max) {
       min = Math.ceil(min);
       max = Math.floor(max);
@@ -65,7 +64,7 @@ function App() {
     setstate2(randomInt(0, 255));
     setstate3(randomInt(0, 255));
 
-    wrap.style.background = `rgba(${state1},${state2},${state3})`;
+    task7ref.current.style.background = `rgba(${state1},${state2},${state3})`;
   }
 
   function task8(e) {
@@ -122,7 +121,7 @@ function App() {
       </section>
       <section>
         <h2>Task 7</h2>
-        <div className="block-7"></div>
+        <div className="block-7" ref={task7ref}></div>
         <button className="task-7" onClick={task7}>Color</button>
       </section>
       <section>
