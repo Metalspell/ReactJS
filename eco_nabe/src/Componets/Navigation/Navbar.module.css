@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'Roboto 400';
+  src: url('../../Fonts/Roboto/Roboto-Regular.ttf');
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.logo {
+  display: block;
+  width: 20%;
+}
+
+.logoImg {
+  display: block;
+  width: 14%;
+  height: 50px;
+  background: url('./images/Group\ 4468.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.navbarWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+}
+
+.navbarWrapper nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbarWrapper nav ul li {
+  display: inline-block;
+  margin: 1vw;
+}
+
+.navbarWrapper nav ul li a {
+  text-decoration: none;
+  font-family: 'Roboto 400';
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.Navbar .MobileNavigation {
+  display: none;
+}
+
+.simpleLine {
+  display: block;
+  position: absolute;
+  top: 90px;
+  width: 100vw;
+  right: 0vh;
+  border: 1px solid #1A3136;
+  opacity: 0.1;
+}
+
+@media (max-width: 760px) {
+  .Navbar .Navigation {
+    display: none;
+  }
+
+  .Navbar .MobileNavigation {
+    display: flex;
+    align-items: center;
+  }
+
+  .Navbar .MobileNavigation .Hamburger {
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+  }
+
+  .Navbar nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    top: 120px;
+    right: 5%;
+    width: 100%;
+  }
+
+  .navbarWrapper nav ul li {
+    margin: 4vw 0vw;
+  }
+}
