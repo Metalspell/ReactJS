@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'HelveticaLTS';
+  src: url('../../Fonts/Helvetica/HelveticaNeueLTStd-Th.otf');
+}
+
+.mainWrapper {
+  margin: 5vw 0vw;
+}
+
+.generalTitleWrapper {
+  width: 70%;
+}
+
+.generalTitle {
+  font-family: 'HelveticaLTS';
+  font-size: 3vw;
+  font-weight: 700;
+}
+
+.titleFirstSpan {
+  color: #8CBF80;
+}
+
+.titleSecondSpan {
+  text-decoration: none;
+  border-bottom: 1px #111111 solid
+}
+
+.mainPic {
+  left: 5%;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 40vw;
+  background: url('./images/main-pic.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.arrowIntoSquare {
+  position: absolute;
+  display: block;
+  background: url('./images/Group\ 4456.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  top: -7%;
+  right: 20%;
+  width: 6vw;
+  height: 6vw;
+}
+
+.picIntoMain {
+  position: absolute;
+  display: block;
+  background: url('./images/joakim-aglo-mNKG-e9A4rI-unsplash\ 1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 25vw;
+  right: 0;
+  height: 25vw;
+  top: 65%;
+}
+
+@media (max-width: 480px) {
+  .generalTitleWrapper {
+    width: 100%;
+  }
+}

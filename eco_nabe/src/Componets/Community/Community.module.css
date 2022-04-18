@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'HelveticaLTS';
+  src: url('../../Fonts/Helvetica/HelveticaNeueLTStd-Th.otf');
+}
+
+@font-face {
+  font-family: 'Roboto 400';
+  src: url('../../Fonts/Roboto/Roboto-Regular.ttf');
+}
+
+.mainWrapper {
+  margin-top: 50vw;
+}
+
+.textBlock {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+}
+
+.mainWrapper .textBlock div h1{
+  font-size: 5vw;
+  margin: 0;
+  font-family: 'HelveticaLTS';
+  font-weight: 400;
+}
+
+.mainWrapper .textBlock div h1:last-child {
+  color: #8CBF80;
+}
+
+.mainWrapper .textBlock div:last-child {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  margin-left: 15vw;
+}
+
+.mainWrapper .textBlock div p{
+  font-family: 'Roboto 400';
+  font-weight: 400;
+  font-size: 1vw;
+  line-height: 1.5vw;
+}

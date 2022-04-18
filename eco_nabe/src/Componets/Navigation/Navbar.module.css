@@ -43,6 +43,7 @@
   font-family: 'Roboto 400';
   color: #111111;
   text-transform: uppercase;
+  font-size: 1.5vw;
 }
 
 .Navbar .MobileNavigation {
@@ -59,7 +60,7 @@
   opacity: 0.1;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 480px) {
   .Navbar .Navigation {
     display: none;
   }
@@ -75,6 +76,15 @@
     cursor: pointer;
   }
 
+  .logoImg {
+    width: 30%;
+    margin-left: 5%;
+  }
+
+  .simpleLine {
+    top: 80px;
+  }
+
   .Navbar nav ul {
     display: flex;
     flex-direction: column;
@@ -87,5 +97,9 @@
 
   .navbarWrapper nav ul li {
     margin: 4vw 0vw;
+  }
+
+  .navbarWrapper nav ul li a {
+    font-size: 5vw;
   }
 }

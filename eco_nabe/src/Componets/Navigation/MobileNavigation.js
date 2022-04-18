@@ -7,12 +7,12 @@ import { useState } from "react";
 const MobileNavigation = () => {
   const [openMenu, setOpenMenu] = useState(false)
 
-  const hamburgerIcon = <AiOutlineMenu className={classes.Hamburger} size='40px' color='#111111' onClick={() => setOpenMenu(!openMenu)} />
-  const closeIcon = <CgCloseO className={classes.Hamburger} size='40px' color='#111111' onClick={() => setOpenMenu(!openMenu)} />
+  const hamburgerIcon = <AiOutlineMenu className={classes.Hamburger} size='3rem' color='#111111' onClick={() => setOpenMenu(!openMenu)} />
+  const closeIcon = <CgCloseO className={classes.Hamburger} size='3rem' color='#111111' onClick={() => setOpenMenu(!openMenu)} />
 
   return (
     <nav className={classes.MobileNavigation}>
-      {openMenu && <NavLinks />}
+      {openMenu && <NavLinks/>}
       {openMenu ? closeIcon : hamburgerIcon}
     </nav>
   );
