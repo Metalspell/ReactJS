@@ -8,17 +8,26 @@
   src: url('../../Fonts/Roboto/Roboto-Regular.ttf');
 }
 
+@font-face {
+  font-family: 'Roboto 200';
+  src: url('../../Fonts/Roboto/Roboto-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto Medium';
+  src: url('../../Fonts/Roboto/Roboto-Medium.ttf');
+}
+
 .mainWrapper {
   margin-top: 50vw;
 }
 
 .textBlock {
   display: flex;
-  width: 100%;
   justify-content: start;
 }
 
-.mainWrapper .textBlock div h1{
+.mainWrapper .textBlock div h1 {
   font-size: 5vw;
   margin: 0;
   font-family: 'HelveticaLTS';
@@ -36,9 +45,92 @@
   margin-left: 15vw;
 }
 
-.mainWrapper .textBlock div p{
-  font-family: 'Roboto 400';
+.mainWrapper .textBlock div p {
+  font-family: 'Roboto 200';
   font-weight: 400;
   font-size: 1vw;
   line-height: 1.5vw;
+}
+
+.CommunityListElements {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10vw 0vw 0vw 15vw;
+  justify-content: flex-start;
+}
+
+.CommunityListElements div {
+  width: 30%;
+  height: 10vw;
+  margin-right: 2vw;
+  border-bottom: 1px #295852 dotted;
+}
+
+.CommunityListElements div p {
+  padding-top: 1vw;
+  font-family: 'Roboto Medium';
+  font-size: 1.2vw;
+  line-height: 2vw;
+  color: #111111;
+}
+
+.CommunityListElements div p span {
+  opacity: 0.3;
+  padding-right: 1vw;
+}
+
+:is(.CommunityListElements div:last-child,
+  .CommunityListElements div:nth-child(10)) {
+  border-bottom: none;
+}
+
+@media (max-width: 480px) {
+  .mainWrapper {
+    margin-top: 110vw;
+  }
+
+  .textBlock {
+    margin: 0vw 4vw;
+    flex-direction: column;
+  }
+
+  .mainWrapper .textBlock div h1 {
+    font-size: 10vw;
+  }
+
+  .mainWrapper .textBlock div:last-child {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .mainWrapper .textBlock div p {
+    font-family: "Roboto 200";
+    font-size: 5vw;
+    line-height: 24px;
+  }
+
+  .CommunityListElements {
+    margin: 5vw 0vw;
+  }
+
+  .CommunityListElements div {
+    width: 100%;
+    height: 15vw;
+    margin-left: 5vw;
+    display: flex;
+    align-items: center;
+  }
+
+  .CommunityListElements div p {
+    font-size: 4vw;
+    padding: 0;
+  }
+
+  :is(.CommunityListElements div:last-child,
+    .CommunityListElements div:nth-child(10)) {
+    border-bottom: 1px #295852 dotted;
+  }
+
 }

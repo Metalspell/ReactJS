@@ -32,7 +32,7 @@
   display: block;
   width: 100%;
   height: 40vw;
-  background: url('./images/main-pic.svg');
+  background: url('./images/joakim-aglo-mNKG-e9A4rI-unsplash\ 1.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -54,7 +54,7 @@
 .picIntoMain {
   position: absolute;
   display: block;
-  background: url('./images/joakim-aglo-mNKG-e9A4rI-unsplash\ 1.png');
+  background: url('./images/luke-van-zyl-koH7IVuwRLw-unsplash\ 1.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -67,5 +67,36 @@
 @media (max-width: 480px) {
   .generalTitleWrapper {
     width: 100%;
+    margin: 0vw 4vw;
+  }
+  .generalTitle {
+    font-size: 8vw;
+  }
+
+  .mainPic {
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 70vw;
+    background-size: cover;
+  }
+
+  .mainWrapper article:last-child {
+    margin-top: 35vw;
+  }
+
+  .arrowIntoSquare {
+    top: -20vw;
+    left: 0;
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .picIntoMain {
+    top: 75%;
+    right: -4vw;
+    width: 30vw;
+    height: 30vw;
   }
 }
