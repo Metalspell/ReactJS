@@ -1,0 +1,116 @@
+@font-face {
+  font-family: 'HelveticaLTS';
+  src: url('../../Fonts/Helvetica/HelveticaNeueLTStd-Th.otf');
+}
+
+.carouselBackground {
+  width: 100%;
+  background-color: #2A4844;
+  overflow: hidden;
+  margin-bottom: 10vw;
+}
+
+.carouselItems {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.carouselItems img {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.slider-wrapper {
+  margin-top: 10vw !important;
+  height: 50vw;
+}
+
+.control-dots {
+  display: none;
+}
+
+.carousel:last-child {
+  display: none;
+}
+
+.carousel.carousel-slider .control-arrow.control-next {
+  left: 90vw !important;
+  top: 45vw !important;
+  height: 7vw;
+}
+
+.carousel.carousel-slider .control-arrow.control-prev {
+  right: -90vw !important;
+  top: 35vw !important;
+  height: 7vw;
+}
+
+
+.carousel .carousel-status {
+  top: 45vw !important;
+  left: 1.5vw !important;
+  font-size: 2vw !important;
+}
+
+.carousel.carousel-slider .control-arrow:hover {
+  background: none !important;
+}
+
+.carousel .control-arrow:before,
+.carousel.carousel-slider .control-arrow.control-prev:before {
+  content: url('./icons/Vector\ 4.svg') !important;
+  border: none !important;
+}
+
+.carousel .control-arrow:before,
+.carousel.carousel-slider .control-arrow.control-next:before {
+  content: url('./icons/Vector\ 2.svg') !important;
+  border: none !important;
+}
+
+article {
+  text-align: center;
+}
+
+article h3 {
+  font-family: 'HelveticaLTS';
+  font-weight: 400;
+  font-size: 4vw;
+  color: #111111;
+}
+
+@media (max-width: 480px) {
+  .carouselBackground {
+    height: 65vw;
+  }
+
+  .carousel .carousel-status {
+    top: 0 !important;
+    font-size: 4vw !important;
+    padding: 0 !important;
+    left: 5vw !important;
+  }
+
+  .carouselItems {
+    width: 90%;
+  }
+
+  .slider-wrapper {
+    margin-top: 15vw !important;
+  }
+
+  .carousel.carousel-slider .control-arrow.control-next {
+    transform: rotate(-90deg);
+    left: 70vw !important;
+    top: 4vw !important;
+  }
+
+  .carousel.carousel-slider .control-arrow.control-prev {
+    right: -40vw !important;
+    top: 4vw !important;
+    height: 7vw;
+    transform: rotate(-90deg);
+  }
+}

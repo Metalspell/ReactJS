@@ -17,7 +17,6 @@ function Navbar() {
     }
   }, [menuOpen]);
 
-  // menuWrapper.current.style.display = 'none'
   return (
     <div className={classes.navbarWrapper} ref={menuWrapper}>
       <div className={classes.logoImg} alt=""></div>
