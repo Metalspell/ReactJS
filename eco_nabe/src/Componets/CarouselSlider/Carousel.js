@@ -1,8 +1,5 @@
 import './Carousel.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css"
-import { useEffect } from "react";
-import { useRef } from 'react';
-import ReactDOM from 'react-dom/client';
 
 let Carousel = require('react-responsive-carousel').Carousel;
 

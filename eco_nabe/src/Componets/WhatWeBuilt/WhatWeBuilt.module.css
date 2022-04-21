@@ -1,0 +1,16 @@
+.mainWrapper {
+  background-color: #26282C;
+  height: 100vw;
+}
+
+.wrapperForLogo {
+  height: 46vw;
+}
+
+.logo {
+  background-image: url('./images/luis-efigenio-nKGl1pSe-is-unsplash\ 1.png');
+  height: -webkit-fill-available;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}

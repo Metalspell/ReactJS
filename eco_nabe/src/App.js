@@ -4,6 +4,8 @@ import Common from './Componets/WhatWeDo/Common';
 import Comunity from './Componets/Community/Community';
 import CommunityList from './Componets/Community/CommunityList';
 import CarouselSlider from './Componets/CarouselSlider/Carousel';
+import Services from './Componets/Services/Services';
+import WhatWeBuilt from './Componets/WhatWeBuilt/WhatWeBuilt';
 
 function App() {
   return (
@@ -15,6 +17,10 @@ function App() {
         <CommunityList />
       </div>
       <CarouselSlider />
+      <div className={classes.generalWrapper}>
+        <Services />
+      </div>
+      <WhatWeBuilt />
     </>
   );
 }
