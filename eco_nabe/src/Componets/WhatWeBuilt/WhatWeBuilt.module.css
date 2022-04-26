@@ -1,6 +1,17 @@
+@font-face {
+  font-family: 'HelveticaLTS';
+  src: url('../../Fonts/Helvetica/HelveticaNeueLTStd-Th.otf');
+}
+
+@font-face {
+  font-family: 'Roboto 400';
+  src: url('../../Fonts/Roboto/Roboto-Regular.ttf');
+}
+
 .mainWrapper {
   background-color: #26282C;
-  height: 100vw;
+  height: auto;
+  position: relative;
 }
 
 .wrapperForLogo {
@@ -13,4 +24,249 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
+}
+
+.innerBlock {
+  position: absolute;
+  width: 43%;
+  top: 35vw;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  right: 13vw;
+}
+
+.innerBlock div {
+  display: flex;
+  flex-direction: column;
+}
+
+.innerBlock div:first-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 5vw 5vw 0vw 5vw;
+}
+
+.innerBlock div:nth-child(2) {
+  padding: 2vw 5vw 4vw 5vw;
+}
+
+.innerBlock div:first-child p {
+  margin-bottom: 3vw;
+}
+
+.innerBlock div h2 {
+  font-family: 'HelveticaLTS';
+  font-weight: 600;
+  font-size: 2vw;
+  color: #ffffff;
+  margin: 0;
+  line-height: 3vw;
+}
+
+.innerBlock div p {
+  font-family: 'Roboto 400';
+  font-weight: 400;
+  font-size: 1vw;
+  color: #ffffff;
+  line-height: 1.5vw;
+}
+
+.simpleWhiteLine {
+  position: absolute;
+  width: 100%;
+  top: 50vw;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.builtList {
+  margin-top: 25vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.builtList:last-child {
+  margin-top: 15vw;
+}
+
+.builtListCentralWrapper {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+}
+
+.builtListCentralWrapper:last-child {
+  margin-left: 15vw;
+}
+
+.builtListCentralWrapper h1 {
+  font-family: 'HelveticaLTS';
+  font-size: 4.7vw;
+  font-weight: 400;
+  line-height: 2vw;
+  color: #ffffff;
+}
+
+.builtListCentralWrapper h1 span {
+  color: #8CBF80;
+}
+
+.builtListItems {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.builtListItems div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 42%;
+}
+
+.builtListItems div h4 {
+  font-family: 'Roboto 400';
+  font-size: 1.2vw;
+  font-weight: 400;
+  line-height: 2vw;
+  margin-left: 1vw;
+  color: #ffffff;
+}
+
+.previewLogo {
+  position: relative;
+  height: 50vw;
+  margin-top: 10vw;
+  background-image: url('./images/bbd61b4c1d0e1863ac7f97ac4c2a7645.jpeg');
+  width: 80%;
+  background-repeat: no-repeat;
+  background-position: 50% 80%;
+  background-size: cover;
+}
+
+.arrowIntoSquare {
+  position: absolute;
+  display: block;
+  background: url('../WhatWeDo/images/Group\ 4456.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  top: 42vw;
+  width: 8vw;
+  height: 8vw;
+}
+
+.ghostBlock {
+  width: 40vw;
+  height: 35vw;
+  position: absolute;
+  opacity: .1;
+  left: 49vw;
+  background-color: #ffffff;
+  top: 30vw;
+}
+
+.iconPlus {
+  width: 3vw;
+  height: 3vw;
+}
+
+@media (max-width: 480px) {
+
+  .innerBlock div:first-child {
+    border-bottom: none;
+  }
+
+  .builtListCentralWrapper:last-child {
+    margin-left: 0vw;
+  }
+
+  .simpleWhiteLine {
+    left: 5vw;
+    width: 90%;
+    top: 25vw;
+  }
+
+  .innerBlock {
+    width: 90%;
+    right: 5vw;
+  }
+
+  .innerBlock div:first-child {
+    border-bottom: none;
+    padding: 10vw 5vw 0vw 5vw;
+  }
+
+  .innerBlock div:nth-child(2) {
+    padding: 10vw 5vw 4vw 5vw;
+  }
+
+  .innerBlock div h2 {
+    font-size: 4vw;
+    line-height: 4vw;
+  }
+
+  .innerBlock div p {
+    font-size: 2vw;
+    line-height: 4vw;
+  }
+
+  .builtList {
+    margin-top: 50vw;
+  }
+
+  .builtListCentralWrapper {
+    width: 90%;
+  }
+
+  .builtListCentralWrapper h1 {
+    font-size: 7vw;
+    font-weight: 600;
+  }
+
+  .builtListItems {
+    flex-direction: column;
+  }
+
+  .builtListItems div {
+    width: 100%;
+  }
+
+  .builtList:last-child .itemOfList:nth-child(8) {
+    margin-bottom: 70vw;
+  }
+
+  .builtListItems div h4 {
+    font-size: 4vw;
+    font-weight: 400;
+    line-height: 5vw;
+    margin-left: 2vw;
+  }
+
+  .previewLogo {
+    height: 60vw;
+    width: 100%;
+  }
+
+  .arrowIntoSquare {
+    bottom: 0;
+    top: 40vw;
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .ghostBlock {
+    left: 0;
+    top: 240vw;
+    width: 100vw;
+    height: 60vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url('./images/54586eef3e082ce12c66fa686869320f.jpeg');
+    opacity: 1;
+  }
+
+  .iconPlus {
+    width: 5vw;
+    height: 5vw;
+  }
 }

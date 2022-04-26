@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 480px) {
   .generalWrapper {
     width: 100%;
     margin: 0 auto;

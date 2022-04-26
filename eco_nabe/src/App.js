@@ -6,21 +6,25 @@ import CommunityList from './Componets/Community/CommunityList';
 import CarouselSlider from './Componets/CarouselSlider/Carousel';
 import Services from './Componets/Services/Services';
 import WhatWeBuilt from './Componets/WhatWeBuilt/WhatWeBuilt';
+import BuiltComponents from './Componets/BuiltComponents/BuiltComponents';
 
 function App() {
   return (
     <>
-      <div className={classes.generalWrapper}>
+      <section className={classes.generalWrapper}>
         <Navbar />
         <Common />
         <Comunity />
         <CommunityList />
-      </div>
+      </section>
       <CarouselSlider />
-      <div className={classes.generalWrapper}>
+      <section className={classes.generalWrapper}>
         <Services />
-      </div>
+      </section>
       <WhatWeBuilt />
+      <section className={classes.generalWrapper}>
+        <BuiltComponents />
+      </section>
     </>
   );
 }
