@@ -1,0 +1,7 @@
+.main-wrapper {
+  width: 100%;
+  display: flex;
+  height: 100vw;
+  background: linear-gradient(#212835 0%, #0F1219 57.94%, #212835 100%);
+  background-color: #0F1116;
+}
