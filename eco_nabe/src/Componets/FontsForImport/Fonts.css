@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'HelveticaLTS';
+  src: url('../../Fonts/Helvetica/HelveticaNeueLTStd-Th.otf');
+}
+
+@font-face {
+  font-family: 'Roboto 400';
+  src: url('../../Fonts/Roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto 200';
+  src: url('../../Fonts/Roboto/Roboto-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto Medium';
+  src: url('../../Fonts/Roboto/Roboto-Medium.ttf');
+}

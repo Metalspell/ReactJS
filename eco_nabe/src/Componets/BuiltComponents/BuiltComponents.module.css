@@ -1,0 +1,49 @@
+@import '../FontsForImport/Fonts.css';
+
+.componentItem {
+  width: 45%;
+}
+
+.mainWrapper {
+  display: flex;
+  margin-top: 5vw;
+  justify-content: space-between;
+}
+
+.componentItem h1 {
+  font-family: 'HelveticaLTS';
+  font-size: 3vw;
+  font-weight: 600;
+  line-height: 5vw;
+  width: 40vw;
+  color: #111111;
+}
+
+.componentItem h1 span {
+  color: #8CBF80;
+}
+
+.componentItem p {
+  font-family: 'Roboto 400';
+  font-size: 1vw;
+  font-weight: 600;
+  line-height: 5vw;
+  width: 40vw;
+  color: #111111;
+}
+
+.picOfInterior {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 53vw;
+}
+
+.componentItem:first-child .picOfInterior {
+  background-image: url('./images/873a1d5fa5bf4914e58a1e1fbb76f316.jpeg');
+}
+
+.componentItem:last-child .picOfInterior {
+  background-image: url('./images/716ebba41a1f5a70314d5fedd94581ab.jpeg');
+}
