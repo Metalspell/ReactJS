@@ -1,0 +1,16 @@
+/* .modal-wrapper {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0, .2);
+}
+
+.modal-wrapper.open {
+  height: 100%;
+  display: block;
+}
+
+.modal-wrapper.close {
+  height: 0%;
+  display: none;
+} */
