@@ -13,14 +13,26 @@ function App() {
   }, [isOpen])
 
   return (
-    <>
     <section className='main-wrapper'>
-      <Mainpage setIsOpen={setIsOpen}/>
-      <Modal isOpen={isOpen}>
+      <Mainpage setIsOpen={setIsOpen} />
+      <Modal
+        ariaHideApp={false}
+        setIsOpen={setIsOpen}
+        isOpen={isOpen}
+        overlayClassName={{
+          base: "overlay-base",
+          afterOpen: "overlay-after",
+          beforeClose: "overlay-before"
+        }}
+        className={{
+          base: "content-base",
+          afterOpen: "content-after",
+          beforeClose: "content-before"
+        }}
+      >
         <ModalWindow setIsOpen={setIsOpen} />
       </Modal>
     </section>
-    </>
   );
 }
 
