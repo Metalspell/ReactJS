@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../../Fonts/Inter/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+.mainWrapper {
+  grid-column-start: 2;
+  grid-column-end: 12;
+  grid-row-start: 10;
+  grid-row-end: 12;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainWrapper article {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.itemsTitle {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.itemsTitle,
+.socialLinkItem {
+  text-transform: uppercase;
+  font-family: 'Inter';
+}
+
+.socialLinkItem {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+  padding: 0.3vw 0vw;
+  margin: 0;
+  cursor: pointer;
+}
+
+.socialLinkItem:hover {
+  text-decoration: underline;
+}
+
+.address {
+  align-items: center;
+}
+
+.ourEmail {
+  align-items: end;
+}

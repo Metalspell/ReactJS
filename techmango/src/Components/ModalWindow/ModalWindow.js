@@ -3,9 +3,10 @@ import Logo from '../Logo/Logo';
 import { useState } from "react";
 import axios from 'axios';
 import { useMutation } from 'react-query';
-import Button from '@mui/material/Button';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
+import SubmitButton from './SubmitButton/SubmitButton';
+import SocialItems from '../SocialItems/SocialItems';
 
 const API_URL = 'https://api.qa.zgambling.com/public/password_recovery';
 
@@ -35,6 +36,7 @@ const ModalWindow = ({ setIsOpen }) => {
   };
 
   const formik = useFormik({
+    validationSchema,
     initialValues: {
       email: '',
     },
@@ -43,32 +45,65 @@ const ModalWindow = ({ setIsOpen }) => {
 
   if (request === null) {
     return (
-      <div className="modal-body">
+      <>
+        <section className="modal-body">
+          <Logo />
+          <img className="modal-close-icon"
+            onClick={() => setIsOpen(false)}
+            src={require('./icons/Group110.png')}
+            alt=""
+          />
+          <form onSubmit={formik.handleSubmit} className='email-form'>
+            <label htmlFor="email"><p>Tell us your email address</p>
+              <p>and we will contact you as soon as possible</p></label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder='mail@mail.com'
+              autoComplete="off"
+              onChange={formik.handleChange}
+              value={formik.values.email}
+              className='form-field'
+            />
+            <SubmitButton
+              onClick={() => setIsOpen(true)}
+            ></SubmitButton>
+          </form>
+          <SocialItems />
+        </section>
+      </>
+    );
+  }
+  if (request === true) {
+    return (
+      <section className="modal-body">
         <Logo />
         <img className="modal-close-icon"
           onClick={() => setIsOpen(false)}
           src={require('./icons/Group110.png')}
           alt=""
         />
-
-        <form onSubmit={formik.handleSubmit}>
-          <label htmlFor="email">Email Address</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            onChange={formik.handleChange}
-            value={formik.values.email}
-          />
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-    );
-  }
-  if (request === true) {
-    return (
-      <h1>Hhhhhhhhhhhhhhhhhhhhhhhhhh</h1>
+        <h1 className='congratulation-header'>
+          Thanks, your message has been sent!
+        </h1>
+        <SocialItems />
+      </section>
     )
+  }
+  if (request === false) {
+    <section className="modal-body">
+      <Logo />
+      <img className="modal-close-icon"
+        onClick={() => setIsOpen(false)}
+        src={require('./icons/Group110.png')}
+        alt=""
+      />
+      <h1 className='congratulation-header'>
+        Send error. Try it again
+      </h1>
+      <SocialItems />
+    </section>
   }
 }
 

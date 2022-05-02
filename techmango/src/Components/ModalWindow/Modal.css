@@ -1,27 +1,21 @@
-/* .modal-wrapper {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: rgba(0,0,0, .2);
+@font-face {
+  font-family: 'Briem Script STD';
+  src: url('../../Fonts/Briem/BriemScriptStd-Bold.otf');
 }
 
-.modal-wrapper.open {
-  height: 100%;
-  display: block;
+@font-face {
+  font-family: 'Inter';
+  src: url('../../Fonts/Inter/Inter-VariableFont_slnt\,wght.ttf');
 }
 
-.modal-wrapper.close {
-  height: 0%;
-  display: none;
-} */
 
 .overlay-base {
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 100%;
-  /* background: rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(30px); */
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(30px);
 }
 
 .overlay-after {
@@ -80,3 +74,69 @@
   grid-row-start: 2;
   grid-row-end: 2;  
 }
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column-start: 4;
+  grid-column-end: 10;
+  grid-row-start: 5;
+  grid-row-end: 7;  
+}
+
+.congratulation-header {
+  grid-column-start: 4;
+  grid-column-end: 10;
+  grid-row-start: 5;
+  grid-row-end: 7;  
+  color: rgba(234, 203, 124, 1);
+  font-family: 'Briem Script STD';
+  font-weight: 700;
+  font-size: 2vw;
+  line-height: 3vw;
+}
+
+.email-form label p {
+  font-family: 'Briem Script STD';
+  font-weight: 700;
+  font-size: 2vw;
+  line-height: 3vw;
+  color: rgba(255, 255, 255, 1);
+  margin: 0;
+  text-align: center;
+}
+
+.form-field {
+  margin: 4vw 0vw;
+  font-family: inherit;
+  width: 60%;
+  border: 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  text-align: center;
+}
+
+.form-field::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  font-family: 'Inter';
+  font-weight: 400;
+}
+
+.form-field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+.form-field:focus {
+  background: transparent;
+}
+
+input:focus {outline: 0;}
