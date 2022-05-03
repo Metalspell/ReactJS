@@ -8,7 +8,6 @@
   src: url('../../Fonts/Inter/Inter-VariableFont_slnt\,wght.ttf');
 }
 
-
 .overlay-base {
   position: fixed;
   bottom: 0;
@@ -40,7 +39,7 @@
   width: 0%;
   background-color: transparent;
   transition-property: background-color, width, height;
-  transition-duration: 500ms;
+  transition-duration: 400ms;
   transition-timing-function: ease-in-out;
 }
 
@@ -95,6 +94,7 @@
   font-weight: 700;
   font-size: 2vw;
   line-height: 3vw;
+  text-align: center;
 }
 
 .email-form label p {
@@ -140,3 +140,44 @@
 }
 
 input:focus {outline: 0;}
+
+
+@media (max-width: 1024px) {
+  .email-form {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 5;
+    grid-row-end: 9; 
+  }
+
+  .email-form label p {
+    font-size: 3.5vw;
+    line-height: 5vw;
+  }
+
+  .form-field {
+    width: 70%;
+  }
+
+  .congratulation-header {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 6;
+    grid-row-end: 7;  
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-wrapper {
+    background-position: -2% 40%;
+    background-size: 210vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .main-wrapper {
+    background-position: -6% 40%;
+    background-size: 170vw;
+  }
+}

@@ -7,9 +7,9 @@ const SocialItems = () => {
         <h4 className={classes.itemsTitle}>
           Social
         </h4>
-        <a className={classes.socialLinkItem} href="@">Twitter</a>
-        <a className={classes.socialLinkItem} href="@">Telegram</a>
-        <a className={classes.socialLinkItem} href="@">Instagram</a>
+        <a className={classes.socialLinkItem} href="@" target="_blank">Twitter</a>
+        <a className={classes.socialLinkItem} href="@" target="_blank">Telegram</a>
+        <a className={classes.socialLinkItem} href="@" target="_blank">Instagram</a>
       </article>
       <article className={classes.address}>
         <h4 className={classes.itemsTitle}>

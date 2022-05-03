@@ -26,3 +26,20 @@
   height: 1.5vw;
   margin-left: 1vw;
 }
+
+@media (max-width: 1024px) {
+  .button {
+    height: 6vw;
+    width: 25vw;
+  }
+
+  .buttonTitle {
+    font-size: 1.5vw;
+  }
+
+  .buttonArrow {
+    width: 2vw;
+    height: 2vw;
+    margin-left: 1vw;
+  }
+}

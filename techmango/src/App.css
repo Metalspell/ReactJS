@@ -9,3 +9,24 @@
   background-size: 75vw;
   position: relative;
 }
+
+@media (max-width: 1024px) {
+  .main-wrapper {
+    background-position: -15% 40%;
+    background-size: 150vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-wrapper {
+    background-position: -2% 40%;
+    background-size: 210vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .main-wrapper {
+    background-position: -6% 40%;
+    background-size: 170vw;
+  }
+}

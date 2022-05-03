@@ -8,7 +8,7 @@ const Mainpage = ({ setIsOpen }) => {
       <Logo />
       <article className={classes.joinUsWrapper}>
         <h1 className={classes.joinUsTitle}>
-          Have <pre></pre> an idea?
+          Have <span>an idea?</span>
         </h1>
         <div className={classes.buttonWrapper}>
           <Button aria-label='submit' variant="contained" size='large' className={classes.button} onClick={() => setIsOpen(true)}>
