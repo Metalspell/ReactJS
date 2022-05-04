@@ -8,6 +8,7 @@ import * as yup from 'yup';
 import { useFormik } from 'formik';
 import SubmitButton from './SubmitButton/SubmitButton';
 import SocialItems from '../SocialItems/SocialItems';
+import emailjs from 'emailjs-com';
 
 const API_URL = 'https://api.qa.zgambling.com/public/password_recovery';
 
@@ -46,7 +47,6 @@ const ModalWindow = ({ setIsOpen }) => {
   });
 
   useEffect(() => {
-    console.log(formik.errors.email)
     if (formik.errors.email !== '') {
       setActiveError(true);
     }
@@ -81,7 +81,7 @@ const ModalWindow = ({ setIsOpen }) => {
               className={isActiveError ? 'error-active' : 'form-field'}
             />
             <h3 className='error-notify'>{formik.errors.email}</h3>
-            <SubmitButton error={isActiveError}
+            <SubmitButton isActiveError={isActiveError}
               onClick={() => setIsOpen(true)}
             ></SubmitButton>
           </form>
