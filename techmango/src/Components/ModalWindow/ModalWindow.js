@@ -1,4 +1,5 @@
 import './Modal.css';
+import { useEffect } from 'react';
 import Logo from '../Logo/Logo';
 import { useState } from "react";
 import axios from 'axios';
@@ -19,8 +20,8 @@ const validationSchema = yup.object().shape({
 });
 
 const ModalWindow = ({ setIsOpen }) => {
-  const [emailErrors, setEmailErrors] = useState('');
   const [request, setrequest] = useState(null);
+  const [isActiveError, setActiveError] = useState(false);
   const { mutateAsync, isLoading } = useMutation((data) => axios.post(API_URL, JSON.stringify(data)));
   const handleSubmit = async (values, { resetForm }) => {
     await mutateAsync(values, {
@@ -44,6 +45,16 @@ const ModalWindow = ({ setIsOpen }) => {
     onSubmit: handleSubmit,
   });
 
+  useEffect(() => {
+    console.log(formik.errors.email)
+    if (formik.errors.email !== '') {
+      setActiveError(true);
+    }
+    if (formik.errors.email === undefined) {
+      setActiveError(false);
+    }
+  }, [formik.errors.email, isActiveError]);
+
   return (
     <>
       <section className="modal-body">
@@ -64,12 +75,13 @@ const ModalWindow = ({ setIsOpen }) => {
               placeholder='mail@mail.com'
               autoComplete="off"
               autoFocus
+              spellcheck="false"
               onChange={formik.handleChange}
               value={formik.values.email}
-              className='form-field'
+              className={isActiveError ? 'error-active' : 'form-field'}
             />
-            <h3>{formik.errors.email}</h3>
-            <SubmitButton error={formik.errors.email}
+            <h3 className='error-notify'>{formik.errors.email}</h3>
+            <SubmitButton error={isActiveError}
               onClick={() => setIsOpen(true)}
             ></SubmitButton>
           </form>

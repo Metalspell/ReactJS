@@ -1,9 +1,10 @@
 import classes from './SubmitButton.module.css';
 import Button from '@mui/material/Button';
 
-const SubmitButton = () => {
+const SubmitButton = (error) => {
   return (
     <Button
+      loading={error}
       aria-label='submit'
       variant="contained"
       size='large'

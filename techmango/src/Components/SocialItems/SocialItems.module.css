@@ -52,7 +52,7 @@
 
 @media (max-width: 1024px) {
   .mainWrapper {
-    grid-row-start: 11;
+    grid-row-start: 10;
   }
 
   .socialLinkItem {
@@ -62,5 +62,49 @@
   .itemsTitle {
     color: rgba(255, 255, 255, 0.5);
     font-size: 1.1vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainWrapper {
+    flex-wrap: wrap;
+  }
+
+  .mainWrapper article {
+    width: 50%;
+    flex-direction: column;
+  }
+
+  .itemsTitle {
+    font-size: 3vw;
+  }
+
+  .socialLinkItem {
+    font-size: 3.2vw;
+  }
+
+  .address {
+    align-items: unset;
+  }
+
+  .ourEmail {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 400px) {
+  .itemsTitle {
+    display: none;
+  }
+
+  .mainWrapper article {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .mainWrapper article p,
+  .mainWrapper article a {
+    padding: 2vw 3vw;
   }
 }

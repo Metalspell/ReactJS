@@ -71,7 +71,7 @@
   grid-column-start: 11;
   grid-column-end: 11;
   grid-row-start: 2;
-  grid-row-end: 2;  
+  grid-row-end: 2;
 }
 
 .email-form {
@@ -81,14 +81,23 @@
   grid-column-start: 4;
   grid-column-end: 10;
   grid-row-start: 5;
-  grid-row-end: 7;  
+  grid-row-end: 7;
+}
+
+.error-notify {
+  text-transform: uppercase;
+  font-family: 'Inter';
+  font-weight: 400;
+  color: rgba(255, 92, 92, 0.75);
+  margin: 0vw 0vw 2vw 0vw;
+  font-size: 1vw;
 }
 
 .congratulation-header {
   grid-column-start: 4;
   grid-column-end: 10;
   grid-row-start: 5;
-  grid-row-end: 7;  
+  grid-row-end: 7;
   color: rgba(234, 203, 124, 1);
   font-family: 'Briem Script STD';
   font-weight: 700;
@@ -107,12 +116,12 @@
   text-align: center;
 }
 
-.form-field {
-  margin: 4vw 0vw;
+.form-field,
+.error-active {
+  margin: 4vw 0vw 2vw 0vw;
   font-family: inherit;
   width: 60%;
   border: 0;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
   outline: 0;
   font-size: 1.3rem;
   color: white;
@@ -122,6 +131,14 @@
   text-align: center;
 }
 
+.form-field {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.error-active {
+  border-bottom: 2px dashed rgba(255, 92, 92, 0.75);
+}
+
 .form-field::placeholder {
   color: rgba(255, 255, 255, 0.5);
   text-align: center;
@@ -129,7 +146,7 @@
   font-weight: 400;
 }
 
-.form-field:placeholder-shown ~ .form__label {
+.form-field:placeholder-shown~.form__label {
   font-size: 1.3rem;
   cursor: text;
   top: 20px;
@@ -139,7 +156,9 @@
   background: transparent;
 }
 
-input:focus {outline: 0;}
+input:focus {
+  outline: 0;
+}
 
 
 @media (max-width: 1024px) {
@@ -147,7 +166,7 @@ input:focus {outline: 0;}
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 5;
-    grid-row-end: 9; 
+    grid-row-end: 9;
   }
 
   .email-form label p {
@@ -163,8 +182,12 @@ input:focus {outline: 0;}
     grid-column-start: 2;
     grid-column-end: 12;
     grid-row-start: 6;
-    grid-row-end: 7;  
+    grid-row-end: 7;
     font-size: 4vw;
+  }
+
+  .error-notify {
+    font-size: 2vw;
   }
 }
 
@@ -173,11 +196,29 @@ input:focus {outline: 0;}
     background-position: -2% 40%;
     background-size: 210vw;
   }
+
+  .error-notify {
+    font-size: 2vw;
+  }
+
+  .form-field,
+  .error-active {
+    width: 100%;
+  }
+
+  .modal-close-icon {
+    width: 4vw;
+    height: 4vw;
+  }
 }
 
 @media (max-width: 400px) {
   .main-wrapper {
     background-position: -6% 40%;
     background-size: 170vw;
+  }
+
+  .error-notify {
+    font-size: 2.5vw;
   }
 }
