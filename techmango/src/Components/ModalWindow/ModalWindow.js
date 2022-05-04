@@ -19,7 +19,7 @@ const validationSchema = yup.object().shape({
 });
 
 const ModalWindow = ({ setIsOpen }) => {
-
+  const [emailErrors, setEmailErrors] = useState('');
   const [request, setrequest] = useState(null);
   const { mutateAsync, isLoading } = useMutation((data) => axios.post(API_URL, JSON.stringify(data)));
   const handleSubmit = async (values, { resetForm }) => {
@@ -37,22 +37,23 @@ const ModalWindow = ({ setIsOpen }) => {
 
   const formik = useFormik({
     validationSchema,
+    validateOnMount: true,
     initialValues: {
       email: '',
     },
     onSubmit: handleSubmit,
   });
 
-  if (request === null) {
-    return (
-      <>
-        <section className="modal-body">
-          <Logo />
-          <img className="modal-close-icon"
-            onClick={() => setIsOpen(false)}
-            src={require('./icons/Group110.png')}
-            alt=""
-          />
+  return (
+    <>
+      <section className="modal-body">
+        <Logo />
+        <img className="modal-close-icon"
+          onClick={() => setIsOpen(false)}
+          src={require('./icons/Group110.png')}
+          alt=""
+        />
+        {request === null ? (
           <form onSubmit={formik.handleSubmit} className='email-form'>
             <label htmlFor="email"><p>Tell us your email address</p>
               <p>and we will contact you as soon as possible</p></label>
@@ -62,49 +63,31 @@ const ModalWindow = ({ setIsOpen }) => {
               type="email"
               placeholder='mail@mail.com'
               autoComplete="off"
+              autoFocus
               onChange={formik.handleChange}
               value={formik.values.email}
               className='form-field'
             />
-            <SubmitButton
+            <h3>{formik.errors.email}</h3>
+            <SubmitButton error={formik.errors.email}
               onClick={() => setIsOpen(true)}
             ></SubmitButton>
           </form>
-          <SocialItems />
-        </section>
-      </>
-    );
-  }
-  if (request === true) {
-    return (
-      <section className="modal-body">
-        <Logo />
-        <img className="modal-close-icon"
-          onClick={() => setIsOpen(false)}
-          src={require('./icons/Group110.png')}
-          alt=""
-        />
-        <h1 className='congratulation-header'>
-          Thanks, your message has been sent!
-        </h1>
+        ) : null}
+        {request === true ? (
+          <h1 className='congratulation-header'>
+            Thanks, your message has been sent!
+          </h1>
+        ) : null}
+        {request === false ? (
+          <h1 className='congratulation-header'>
+            Send error. Try it again
+          </h1>
+        ) : null}
         <SocialItems />
       </section>
-    )
-  }
-  if (request === false) {
-    <section className="modal-body">
-      <Logo />
-      <img className="modal-close-icon"
-        onClick={() => setIsOpen(false)}
-        src={require('./icons/Group110.png')}
-        alt=""
-      />
-      <h1 className='congratulation-header'>
-        Send error. Try it again
-      </h1>
-      <SocialItems />
-    </section>
-  }
+    </>
+  );
 }
 
 export default ModalWindow;
